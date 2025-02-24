@@ -1,1 +1,46 @@
 
+# 🚀 DevOps Journey - Week 1  
+
+## Key Takeaways  
+
+### 📌 Virtual Machine Fundamentals & Practical Setup  
+- Explored the evolution of VMs & their importance in cloud infrastructure.  
+- Created VMs on AWS (EC2) & Azure, configuring instances, networking, and storage.  
+- Understood hypervisors (VMware, Xen) & cloud-managed virtual environments.  
+
+### 🔒 Secure VM Access via CLI  
+- Connected to EC2 instances securely via SSH, avoiding AWS console dependency.  
+```sh
+ssh -i "path/to/my/keypair.pem" ubuntu@<public-ip-address>
+chmod 600 "path/to/my/keypair.pem"
+
+### Used iTerm (Mac), PuTTY (Windows), & Mobile Xterm for remote access.
+
+⚡ AWS CLI Mastery
+
+>Configured AWS CLI:
+aws configure
+
+>Listed S3 buckets:
+aws s3 ls
+
+>Created a new S3 bucket:
+aws s3 mb s3://my-unique-bucket-name
+
+>Automated EC2 instance creation:
+aws ec2 run-instances --image-id ami-12345678 --count 1 --instance-type t2.micro
+
+>Enhanced automation & reduced manual effort.
+
+🏗️ Infrastructure as Code (IaC)
+1. Explored AWS CloudFormation Templates for IaC.
+2. Compared Terraform vs. AWS CDK for multi-cloud automation.
+3. Understood IaC benefits: repeatability, consistency & scalability.
+
+📅 What’s Next?
+Next, I’ll focus on Linux fundamentals 🐧.
+🔗 Follow my DevOps journey:
+
+LinkedIn - https://www.linkedin.com/in/princemalikk
+Dev.to - https://dev.to/princemalikk
+Hashnode - https://princemalikk.hashnode.dev
