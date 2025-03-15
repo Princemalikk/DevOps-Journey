@@ -1,0 +1,68 @@
+Week 2 Complete! 🎯DevOps Learning Journey -Mastering Shell Scripting! 🚀 
+
+This week, I focused on Shell Scripting for DevOps, learning how to automate tasks, manage cloud resources, and interact with APIs using Linux commands. The hands-on experience helped me understand how crucial scripting is for efficiency in DevOps workflows. 💻🔥
+
+🔍 What I Learned -
+
+✅ File Management & Navigation:
+touch – Create a file.
+vim – Create and write in a file (Esc + i to insert, :wq! to save).
+cd name – Open a directory.
+cat – Read a file without opening.
+ls – List files.
+chmod – Change file permissions.
+man – Get details of a command.
+sh or ./ – Execute a script.
+pwd – Know your current location.
+mkdir – Make a directory.
+ls -ltr – List folders with timestamps.
+cd .. – Go back to the previous directory.
+mv old new – Rename a script.
+
+✅ System Information & Process Management:
+df – Check available storage.
+free – Check memory usage.
+nproc – Get the number of CPU cores.
+top – Show running tasks.
+echo " " – Print text.
+set -x – Enable debug mode.
+ps -ef – Show all running processes.
+ps -ef | grep "amazon" – Get details of a specific process.
+awk -F" " '{print $2}' – Extract column data from a string.
+
+✅ Piping & Filtering:
+command | grep "info" – Filter output.
+set -e – Exit script on error.
+set -o pipefail – Ensure last command in a pipeline runs successfully.
+
+✅ Networking & API Calls:
+curl – Get information from external storage.
+curl link | grep error – Fetch logs and filter errors.
+wget – Download files and use grep on them.
+
+✅ User Management:
+find / -name pam.sd – Search for a file.
+sudo su - – Switch to root user.
+su name – Switch to another user.
+
+✅ Shell Scripting Basics:
+if-else – Conditional statements.
+for – Iterations.
+trap "echo don't use the ctrl+c" SIGINT – Prevent script termination with Ctrl+C.
+
+What I Learned in General:
+✅ Advanced Scripting – Node health analysis, process management, loops, error handling.
+✅ AWS + Shell Scripting – Monitoring EC2, S3, Lambda, automating tasks with Cron jobs.
+aws s3 ls – List all S3 buckets.
+aws ec2 describe-instances | jq '.' – Get detailed EC2 instance info.
+✅ GitHub API Integration – Automating repository management with shell scripts.
+
+⚠️ 2 Common Problems I Faced & How I Fixed Them
+1️⃣ Permission Issues in Shell Scripts
+ 🔹 Problem: Running ./script.sh gave a "Permission Denied" error.
+ 🔹 Fix: Used chmod +x script.sh to make it executable.
+2️⃣ Errors in AWS CLI Output Parsing
+ 🔹 Problem: The AWS CLI returned JSON output that was hard to read.
+ 🔹 Fix: Used jq → aws ec2 describe-instances | jq '.' for better readability.
+
+🚀 Next up, I’ll be diving more into shell scripting and Git/Githubs.
