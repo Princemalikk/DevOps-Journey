@@ -66,3 +66,10 @@ aws ec2 describe-instances | jq '.' – Get detailed EC2 instance info.
  🔹 Fix: Used jq → aws ec2 describe-instances | jq '.' for better readability.
 
 🚀 Next up, I’ll be diving more into shell scripting and Git/Githubs.
+
+Follow up for more details - 
+📖 Hashnode: https://hashnode.com/@princemalikk
+📖 Dev.to: https://dev.to/princemalikk 
+🔗 LinkedIn: https://www.linkedin.com/in/prince-malikk/
+
+
