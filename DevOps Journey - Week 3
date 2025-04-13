@@ -1,0 +1,42 @@
+**Week 3 Complete! 🎯 DevOps Learning Journey – AWS CLI**
+
+As part of my DevOps culture learning, this week I dove deep into **AWS**, and one key takeaway was this:
+
+👉 As a DevOps Engineer working in an AWS environment, **AWS CLI is essential**. It allows you to interact with AWS services via terminal commands — making workflows faster and easier to automate, without clicking through the console.
+
+While working hands-on, I ran into a couple of interesting issues and solved them through a bit of debugging:
+
+---
+
+### ❗ 1. `InvalidClientTokenId` or `SignatureDoesNotMatch` Errors
+
+**Command used:** <aws ec2 describe-instances>
+
+**Error message:**
+An error occurred (InvalidClientTokenId) when calling the DescribeInstances operation: The security token included in the request is invalid.
+```
+
+🔍 **Cause:** This usually means the CLI is using the wrong or expired AWS credentials.
+
+✅ **How I solved it:**
+- First, I checked my configured profiles:
+  ```aws configure list-profiles```
+- Then I ran the command again using the correct profile:
+  ```aws ec2 describe-instances --profile myProfile```
+---
+### ❗ 2. `S3 AccessDenied` – Even When I Thought I Had Permissions
+
+**Command used:**
+```aws s3 cp myfile.txt s3://my-bucket/```
+
+**Error message:**
+```fatal error: An error occurred (AccessDenied) when calling the PutObject operation: Access Denied```
+
+🔍 **Cause:** Even if your IAM user/role has S3 permissions, the **bucket policy** itself might deny certain access conditions.
+
+✅ **How I solved it:**
+- I checked what IAM policies were attached:
+  ```bash
+  aws iam list-attached-user-policies --user-name my-user
+  ```
+- I updated my IAM role to ensure the right permissions were granted for S3, and it worked!
